@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企業公司名稱 | Company Profile</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: #333;
+        }
+
+        /* 導覽列 */
+        header {
+            background: #1f2d3d;
+            color: white;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #00c0ff;
+        }
+
+        /* Banner */
+        .banner {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url("https://images.unsplash.com/photo-1497366216548-37526070297c");
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .banner h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .banner p {
+            font-size: 18px;
+        }
+
+        /* 區塊 */
+        section {
+            padding: 60px 50px;
+        }
+
+        h2.section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* 公司介紹 */
+        .about {
+            max-width: 900px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        /* 服務項目 */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #f5f7fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: #eaf4ff;
+        }
+
+        /* 優勢 */
+        .advantages {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .adv-box {
+            flex: 1;
+            min-width: 250px;
+            background: #1f2d3d;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* 聯絡 */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 5px 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2d3d;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* RWD */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 導覽列 -->
+    <header>
+        <h1>瀛海矽康科技股份有限公司</h1>
+        <nav>
+            <a href="#about">公司介紹</a>
+            <a href="#services">服務項目</a>
+            <a href="#advantages">企業優勢</a>
+            <a href="#contact">聯絡我們</a>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <div class="banner">
+        <div>
+            <h2>專業．創新．值得信賴</h2>
+            <p>提供專業矽膠與解決方案</p>
+        </div>
+    </div>
+
+    <!-- 公司介紹 -->
+    <section id="about">
+        <h2 class="section-title">公司介紹</h2>
+        <div class="about">
+            本公司成立於2000年，致力於矽膠開發、ODM/OEM服務。
+            擁有多年產業經驗，協助企業提升營運效率與競爭力。
+        </div>
+    </section>
+
+    <!-- 服務 -->
+    <section id="services">
+        <h2 class="section-title">服務項目</h2>
+        <div class="services">
+            <div class="card">
+                <h3>半導體</h3>
+                <p>矽膠 ODM/OEM</p>
+            </div>
+            <div class="card">
+                <h3>醫療</h3>
+                <p>矽膠 ODM/OEM</p>
+            </div>
+            <div class="card">
+                <h3>航太</h3>
+                <p>矽膠 ODM/OEM</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 優勢 -->
+    <section id="advantages">
+        <h2 class="section-title">企業優勢</h2>
+        <div class="advantages">
+            <div class="adv-box">
+                ✔ 20年以上系統開發經驗
+            </div>
+            <div class="adv-box">
+                ✔ 專業技術團隊
+            </div>
+            <div class="adv-box">
+                ✔ 客製化解決方案
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡 -->
+    <section id="contact">
+        <h2 class="section-title">聯絡我們</h2>
+        <div class="contact">
+            <p>電話：049-222-5239</p>
+            <p>Email：service@riccoeng.com</p>
+            <p>地址：南投縣南投市彰南路一段555號</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        © 2000 Ricco Company. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
