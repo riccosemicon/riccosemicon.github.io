@@ -145,6 +145,14 @@ section{
     margin:20px auto;
 }
 
+.center-floating-icon {
+  /* position: absolute;  絕對定位 */
+  z-index: 2; /* 確保圖案在最上層 */
+  /* top: 50%;  先移至容器正中央 */
+  /* transform: translate(-50%, -50%);  精準對齊中心點 */
+}
+
+
 /* ===== Services ===== */
 
 .services{
@@ -217,6 +225,10 @@ section{
     margin-bottom:15px;
 }
 
+
+
+
+
 /* ===== Certifications ===== */
 
 .cert-area{
@@ -239,6 +251,9 @@ section{
     width:90px;
     margin-bottom:15px;
 }
+
+
+
 
 /* ===== Footer ===== */
 
@@ -517,9 +532,17 @@ footer a{
 ========================= */
 
 .company-banner{
-    background:#eef4fa;
-    padding:80px 0;
+    /*background:#eef4fa;*/
+    /*padding:80px 0;*/	
+	
+	height:400px;  /* 650px */
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+	
 }
+
 
 .company-banner-grid{
     display:grid;
