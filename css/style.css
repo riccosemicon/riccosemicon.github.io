@@ -6,10 +6,10 @@
 }
 
 body{
-    background:#f5f7fa;
+    background:white;
     color:#333;
 }
-
+/* background:#f5f7fa; */
 
 /* ===== Header ===== */
 
@@ -58,18 +58,106 @@ header{
     color:#0b4ea2;
 }
 
+/* 基礎選單樣式 */
+.nav-menu {
+	list-style: none;
+	display: flex;
+	gap: 40px;
+}
+/* 
+	gap: 30px;
+	padding: 0;
+	margin: 50px;	
+	font-family: Arial, sans-serif; 
+*/
+
+
+.nav-item {
+	position: relative;
+}
+
+.nav-link {
+	text-decoration: none;
+	color: #333;
+	font-size: 18px;
+	font-weight: 500;
+	padding: 8px 0;
+	display: block;
+}
+.nav-link2 {
+	text-decoration: none;
+	color: #333;
+	font-size: 18px;
+	font-weight: 500;
+	padding: 8px 0;
+	display: block;
+}
+
+/* 核心：使用偽元素 ::after 製作底線效果 */
+.nav-link::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 3px;
+	background-color: #007bff; /* 底線顏色 */
+	transform: scaleX(0);       /* 預設隱藏（縮小至 0） */
+	transform-origin: bottom right;
+	transition: transform 0.3s ease; /* 動態滑出效果 */
+}
+
+/* 滑鼠懸停與點擊選取後的底線狀態 */
+.nav-link:hover::after,
+.nav-link.active::after {
+	transform: scaleX(1);       /* 顯示底線（放大至 1） */
+	transform-origin: bottom left;
+}
+
+/* 已選取項目的文字顏色 */
+.nav-link.active {
+	color: #007bff; 
+}
+
+/* 核心：使用偽元素 ::after 製作底線效果 */
+.nav-link2::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 3px;
+	background-color: #007bff; /* 底線顏色 */
+	transform: scaleX(0);       /* 預設隱藏（縮小至 0） */
+	transform-origin: bottom right;
+	transition: transform 0.3s ease; /* 動態滑出效果 */
+}
+
+/* 滑鼠懸停與點擊選取後的底線狀態 */
+.nav-link2:hover::after,
+.nav-link2.active::after {
+	transform: scaleX(1);       /* 顯示底線（放大至 1） */
+	transform-origin: bottom left;
+}
+
+/* 已選取項目的文字顏色 */
+.nav-link2.active {
+	color: #007bff; 
+}
+
 /* ===== Hero ===== */
 
 .hero{
-    height:400px;  /* 650px */
+    height:650px;
+	
     background-size:cover;
     background-position:center;
     display:flex;
     align-items:center;
 }
+/* height:650px; */
 
 /*
-
 .hero{
     height:400px; 
     background:    
@@ -95,6 +183,7 @@ header{
     color:#6c7a89;
     letter-spacing:2px;
     margin-bottom:20px;
+	font-weight: bold;
 }
 
 .hero h1{
@@ -199,13 +288,23 @@ section{
     gap:40px;
 }
 
+.advantages2{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:40px;
+}
+
 .adv{
 	display:flex;
     text-align:center;
     background:white;
     padding:40px 20px;
-	gap: 12px;	
-	
+	gap: 12px;		
+}
+
+.adv2 { 
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .icon{
@@ -214,15 +313,62 @@ section{
     margin-bottom:20px;
 }
 
-.display-v{
+.display-h{
 	display:flex;
-	flex-direction: column;
+	color:#163760;	
 	align-items: flex-start;	
 }
 
 
+.display-v{
+	display:flex;
+	color:#163760;
+	flex-direction: column;
+	align-items: flex-start;	
+}
+
+.display-v2{
+	display:flex;
+	color:#163760;
+	flex-direction: column;
+	align-items: flex-start; 	   
+	justify-content: center;  
+	height: 250px;            /* 必須設定容器高度 */	
+	text-align: start;
+}
+
 .adv h4{
     margin-bottom:15px;
+}
+
+
+/* 上半部：使用 Flexbox 左右排列 */
+.top-section {
+  display: flex;
+  align-items: center; /* 上下垂直置中 */
+  margin-bottom: 20px;
+}
+
+/* 上半部左邊 (圖示) */
+.left-icon {
+  flex: 0 0 100px; /* 固定寬度 100px */
+  margin-right: 20px;
+}
+.left-icon img {
+  width: 100%;
+  height: auto;
+}
+
+/* 上半部右邊 (文字) */
+.right-text {
+  flex: 1; /* 佔滿剩餘寬度 */
+}
+
+.bottom-section {
+  display: flex;
+  align-items: center; /* 上下垂直置中 */
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 
@@ -232,8 +378,9 @@ section{
 /* ===== Certifications ===== */
 
 .cert-area{
-    background:#eef3f8;
+    background:white;
 }
+/* background:#eef3f8; */
 
 .certs{
     display:grid;
@@ -303,8 +450,9 @@ footer a{
 .navbar,
 .footer-grid,
 .hero-content{
-    width:95%;
+    width:100%;
 }
+/* width:95%; */
 
 .services,
 .advantages,
@@ -384,20 +532,21 @@ footer a{
 }
 
 .cert-gallery{
-    background:#fafafa;
+    background:white;
     padding:80px 0;
 }
+/* background:#fafafa; */
 
 .gallery-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(5,1fr);
     gap:25px;
 }
 
 .gallery-card{
     background:white;
     border:1px solid #ddd;
-}
+	text-align:center;}
 
 .gallery-card img{
     height:280px;
@@ -407,6 +556,7 @@ footer a{
 
 .gallery-info{
     padding:20px;
+	vertical-align:center;
 }
 
 
@@ -478,9 +628,10 @@ footer a{
 ========================= */
 
 .product-section{
-    background:#fafafa;
+    background:white;
     padding:80px 0;
 }
+/* background:#fafafa; */
 
 .product-grid{
     display:grid;
