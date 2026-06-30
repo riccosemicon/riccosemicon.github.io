@@ -13,6 +13,7 @@
 <body>
 
 <header>
+
     <div class="navbar">
 
         <div class="logo">
@@ -20,17 +21,51 @@
 			<img src="images/RiCCO-LOGO(去背).png" alt="回到首頁" width="40%">
 		</a>		
         </div>
+		
+		<!-- HTML 選單結構 -->
+		<ul class="nav-menu">			
+			<li class="nav-item"><a href="company.html" class="nav-link" onclick="setActive(this)">公司介紹</a></li>
+			<li class="nav-item"><a href="#" class="nav-link" onclick="setActive(this)">服務領域</a></li>
+			<li class="nav-item"><a href="#" class="nav-link" onclick="setActive(this)">技術優勢</a></li>
+			<li class="nav-item"><a href="product.html" class="nav-link" onclick="setActive(this)">產品介紹</a></li>
+			<li class="nav-item"><a href="quality.html" class="nav-link" onclick="setActive(this)">品質與認證</a></li>
+			<li class="nav-item"><a href="https://www.surveycake.com/s/nxPva" target="_blank" class="nav-link" onclick="setActive(this)">聯絡我們</a></li>			
+		</ul>
+		
+		<!-- HTML 選單結構 -->
+		<ul class="nav-menu">	
+			<li class="nav-item"><a href="#" class="nav-link2 active" onclick="setActive2(this)">繁中</a></li>
+			<li class="nav-item"><a href="#" class="nav-link2" onclick="setActive2(this)">EN</a></li>
+			<li class="nav-item"><a href="#" class="nav-link2" onclick="setActive2(this)">日本語</a></li>
+			
+		</ul>
 
-        <ul class="menu">
-            <li><a href="company.html">公司介紹</a></li>
-            <li><a href="#">服務領域</a></li>
-            <li><a href="#">技術優勢</a></li>
-            <li><a href="product.html">產品介紹</a></li>
-            <li><a href="quality.html">品質認證</a></li>	
-            <li><a href="#">聯絡我們</a></li>
-        </ul>
+		<!-- JavaScript 切換點擊狀態 -->
+		<script>
+			function setActive(element) {
+				// 移除所有項目的 active 類別
+				document.querySelectorAll('.nav-link').forEach(link => {
+					link.classList.remove('active');
+				});
+				// 為當前點擊的項目加上 active 類別
+				element.classList.add('active');
+			}
+		</script>
+		
+		<!-- JavaScript 切換點擊狀態 -->
+		<script>
+			function setActive2(element) {
+				// 移除所有項目的 active 類別
+				document.querySelectorAll('.nav-link2').forEach(link => {
+					link.classList.remove('active');
+				});
+				// 為當前點擊的項目加上 active 類別
+				element.classList.add('active');
+			}
+		</script>		
 
     </div>
+	
 </header>
 
 <section class="hero" 
@@ -74,38 +109,38 @@ style="background-image:url('images/官網首頁.png');">
 
 	<div class="services">
 
-	<div class="card">
-	<img src="images/首頁領域_半導體領域.png">
-	<div class="card-body">
-	<h3>半導體設備</h3>
-	<p>高潔淨&#12289;耐化學&#12289;耐高溫等</p>
-	<p>精密矽膠零件應用</p>
-	</div>
-	</div>
+		<div class="card">
+		<img src="images/首頁領域_半導體領域.png">
+		<div class="card-body">
+		<h3>半導體設備</h3>
+		<p>高潔淨&#12289;耐化學&#12289;耐高溫等</p>
+		<p>精密矽膠零件應用</p>
+		</div>
+		</div>
 
-	<div class="card">
-	<img src="images/首頁領域_醫療器材.png">
-	<div class="card-body">
-	<h3>醫療器材</h3>
-	<p>侵入式鼻胃管等</p>
-	</div>
-	</div>
+		<div class="card">
+		<img src="images/首頁領域_醫療器材.png">
+		<div class="card-body">
+		<h3>醫療器材</h3>
+		<p>侵入式鼻胃管等</p>
+		</div>
+		</div>
 
-	<div class="card">
-	<img src="images/首頁領域_航太.png">
-	<div class="card-body">
-	<h3>航太產業</h3>
-	<p>高可靠度精密矽膠零件</p>
-	</div>
-	</div>
+		<div class="card">
+		<img src="images/首頁領域_航太.png">
+		<div class="card-body">
+		<h3>航太產業</h3>
+		<p>高可靠度精密矽膠零件</p>
+		</div>
+		</div>
 
-	<div class="card">
-	<img src="images/首頁領域_ODM_OEM.png">
-	<div class="card-body">
-	<h3>ODM / OEM</h3>
-	<p>依圖面或需求客製化開發與製造</p>
-	</div>
-	</div>
+		<div class="card">
+		<img src="images/首頁領域_ODM_OEM.png">
+		<div class="card-body">
+		<h3>ODM / OEM</h3>
+		<p>依圖面或需求客製化開發與製造</p>
+		</div>
+		</div>
 
 	</div>
 
@@ -187,39 +222,38 @@ style="background-image:url('images/官網首頁.png');">
 
 <section class="cert-area">
 
-		<div class="container">
+	<div class="container">
 
 		<h2 class="section-title">
-		品質與認證
+			品質與認證
 		</h2>
 
 		<div class="certs">
 		
-		<div class="cert">
-		<img src="images/ISO13485.png">
-		<h4>ISO 13485</h4>
-		</div>
-		
-		<div class="cert">
-		<img src="images/QMS.png">
-		<h4>Medical Device<br>GMP</h4>
-		</div>		
-		
-		<div class="cert">
-		<img src="images/ISO13485.png">
-		<h4>ISO 14001</h4>
-		</div>
+			<div class="cert">
+			<img src="https://cdn-icons-png.flaticon.com/512/190/190411.png">
+			<h4>ISO 9001</h4>
+			</div>
+			
+			<div class="cert">
+			<img src="https://cdn-icons-png.flaticon.com/512/190/190411.png">
+			<h4>ISO 13485</h4>
+			</div>
 
-		<div class="cert">
-		<img src="https://cdn-icons-png.flaticon.com/512/190/190411.png">
-		<h4>ISO 9001</h4>
-		</div>
-
-		<div class="cert">
-		<img src="https://cdn-icons-png.flaticon.com/512/190/190411.png">
-		<h4>AS 9100D</h4>
-		</div>
-
+			<div class="cert">
+			<img src="https://cdn-icons-png.flaticon.com/512/190/190411.png">
+			<h4>AS 9100D</h4>
+			</div>
+			
+			<div class="cert">
+			<img src="https://cdn-icons-png.flaticon.com/512/190/190411.png">
+			<h4>ISO 14001</h4>
+			</div>
+			
+			<div class="cert">
+			<img src="images/GMP_LOG.jpg">
+			<h4>Medical Device<br>GMP</h4>
+			</div>	
 
 		</div>
 
@@ -264,7 +298,7 @@ style="background-image:url('images/官網首頁.png');">
 			<ul>
 			<li><a href="product.html">&#9654 &nbsp; 產品介紹</a></li>
 			<li><a href="quality.html">&#9654 &nbsp; 品質認證</a></li>
-			<li>&#9654 &nbsp; 聯絡我們</li>
+			<li><a href="https://www.surveycake.com/s/nxPva" target="_blank">&#9654 &nbsp; 聯絡我們</a></li>
 			</ul>
 		</div>		
 
@@ -273,7 +307,7 @@ style="background-image:url('images/官網首頁.png');">
 			<ul>
 			<li>有任何需求或問題？</li>
 			<li>觀迎與我們聯繫！</li>
-			<li>聯絡我們</li>
+			<li><a href="https://www.surveycake.com/s/nxPva" target="_blank"> 聯絡我們</a></li>
 			</ul>
 		</div>
 

@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>品質與認證 | RiCCO</title>
-
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -16,24 +16,59 @@
 <!-- Header -->
 
 <header>
+
     <div class="navbar">
 
         <div class="logo">
 		<a href="index.html">
 			<img src="images/RiCCO-LOGO(去背).png" alt="回到首頁" width="40%">
-		</a>
+		</a>		
         </div>
+		
+		<!-- HTML 選單結構 -->
+		<ul class="nav-menu">			
+			<li class="nav-item"><a href="company.html" class="nav-link" onclick="setActive(this)">公司介紹</a></li>
+			<li class="nav-item"><a href="#" class="nav-link" onclick="setActive(this)">服務領域</a></li>
+			<li class="nav-item"><a href="#" class="nav-link" onclick="setActive(this)">技術優勢</a></li>
+			<li class="nav-item"><a href="product.html" class="nav-link" onclick="setActive(this)">產品介紹</a></li>
+			<li class="nav-item"><a href="quality.html" class="nav-link  active" onclick="setActive(this)">品質與認證</a></li>
+			<li class="nav-item"><a href="https://www.surveycake.com/s/nxPva" target="_blank" class="nav-link" onclick="setActive(this)">聯絡我們</a></li>			
+		</ul>
+		
+		<!-- HTML 選單結構 -->
+		<ul class="nav-menu">	
+			<li class="nav-item"><a href="#" class="nav-link2 active" onclick="setActive2(this)">繁中</a></li>
+			<li class="nav-item"><a href="#" class="nav-link2" onclick="setActive2(this)">EN</a></li>
+			<li class="nav-item"><a href="#" class="nav-link2" onclick="setActive2(this)">日本語</a></li>
+			
+		</ul>
 
-        <ul class="menu">
-            <li><a href="company.html">公司介紹</a></li>
-            <li><a href="#">服務領域</a></li>
-            <li><a href="#">技術優勢</a></li>
-            <li><a href="product.html">產品介紹</a></li>
-            <li><a href="quality.html">品質認證</a></li>	
-            <li><a href="#">聯絡我們</a></li>
-        </ul>
+		<!-- JavaScript 切換點擊狀態 -->
+		<script>
+			function setActive(element) {
+				// 移除所有項目的 active 類別
+				document.querySelectorAll('.nav-link').forEach(link => {
+					link.classList.remove('active');
+				});
+				// 為當前點擊的項目加上 active 類別
+				element.classList.add('active');
+			}
+		</script>
+		
+		<!-- JavaScript 切換點擊狀態 -->
+		<script>
+			function setActive2(element) {
+				// 移除所有項目的 active 類別
+				document.querySelectorAll('.nav-link2').forEach(link => {
+					link.classList.remove('active');
+				});
+				// 為當前點擊的項目加上 active 類別
+				element.classList.add('active');
+			}
+		</script>		
 
     </div>
+
 </header>
 
 <!-- Banner -->
@@ -61,63 +96,39 @@ style="background-image:url('images/品質與認證.png');">
 	<div class="container">
 
 		<h2>認證總覽</h2>
-
+		
 		<div class="cert-icons">
 
-
 			<div class="cert-icon">
-
-				<img src="images/ISO13485.png">
-
-				<h4>ISO13485</h4>
-
-				<p>MD-1141</p>
-
-			</div>
-			
-
-			<div class="cert-icon">
-
-				<img src="images/QMS.png">
-
-				<h4>GMP</h4>
-
-				<p>Medical Device</p>
-
-			</div>
-			
-			
-			<div class="cert-icon">
-
-				<img src="images/ISO14000.png">
-
-				<h4>ISO14001</h4>
-
-				<p>GITW-0045-EC</p>
-
-			</div>	
-			
-			
-			<div class="cert-icon">
-
-				<img src="images/iso9001.png">
-
+				<img src="https://cdn-icons-png.flaticon.com/512/190/190411.png">
 				<h4>ISO9001</h4>
-
 				<p>QMS44307</p>
-
-			</div>	
+			</div>		
 			
+			<div class="cert-icon">
+				<img src="https://cdn-icons-png.flaticon.com/512/190/190411.png">
+				<h4>ISO13485</h4>
+				<p>MD-1141</p>
+			</div>		
 
 			<div class="cert-icon">
-
-				<img src="images/as9100.png">
-
+				<img src="https://cdn-icons-png.flaticon.com/512/190/190411.png">
 				<h4>AS9100D</h4>
-
 				<p>CERT-0145994</p>
-
 			</div>	
+			
+			<div class="cert-icon">
+				<img src="https://cdn-icons-png.flaticon.com/512/190/190411.png">
+				<h4>ISO14001</h4>
+				<p>GITW-0045-EC</p>
+			</div>	
+
+			<div class="cert-icon">
+				<img src="images/GMP_LOG.jpg">
+				<h4>GMP</h4>
+				<p>Medical Device</p>
+			</div>	
+	
 
 		</div>
 
@@ -126,80 +137,157 @@ style="background-image:url('images/品質與認證.png');">
 </section>
 
 <!-- 證書展示 -->
-
+<!--
 <section class="cert-gallery">
 
-<div class="container">
+	<div class="container">
 
-<h2>證書展示</h2>
+	<h2>證書展示</h2>
 
-<div class="gallery-grid">
+		<div class="gallery-grid">
+		
+			
+			<div class="gallery-card">
+				<img src="images/ISO9001.png">
+				<div class="gallery-info">
+				<h3>ISO9001</h3>
+				<p>品質管理系統</p>
+				</div>
+			</div>
+			
+		
+			<div class="adv">
+				<div class="icon">				
+					<img src="images/QMS.png" width="50%">
+				</div>	
+				<div class="display-v">
+				<h3>ISO9001</h3>
+				<p>品質管理系統</p>
+				</div>
+			</div>
+			
+			<div class="adv">
+				<img src="images/ISO13485.png">
+				<div class="gallery-info">
+				<h3>ISO13485</h3>
+				<p>醫療器材品質管理系統</p>
+				</div>
+			</div>
+			
+			<div class="adv">
+				<img src="images/AS9100D.jpg">
+				<div class="gallery-info">
+				<h3>AS9100D</h3>
+				<p>航太品質管理系統</p>
+				</div>
+			</div>
+			
+			<div class="adv">
+				<img src="images/ISO14000.png">
+				<div class="gallery-info">
+				<h3>ISO14001</h3>
+				<p>環境管理系統</p>
+				</div>
+			</div>			
 
-
-	<div class="gallery-card">
-
-		<img src="images/ISO13485.png">
-
-		<div class="gallery-info">
-
-		<h3>ISO13485</h3>
-
-		<p>醫療器材品質管理系統</p>
-
-		</div>
-
-	</div>
-	
-
-	<div class="gallery-card">
-
-		<img src="images/QMS.png">
-
-		<div class="gallery-info">
-
-		<h3>QMS認證</h3>
-
-		<p>品質管理系統</p>
-
-		</div>
-
-	</div>
-	
-
-	<div class="gallery-card">
-
-		<img src="images/ISO9000.png">
-
-		<div class="gallery-info">
-
-		<h3>ISO9001</h3>
-
-		<p>品質管理系統</p>
-
-		</div>
-
-	</div>
-	
-
-	<div class="gallery-card">
-
-		<img src="images/AS9100D.jpg">
-
-		<div class="gallery-info">
-
-		<h3>AS9100D</h3>
-
-		<p>航太品質管理系統</p>
+			<div class="adv">
+				<img src="images/QMS.png">
+				<div class="gallery-info">
+				<h3>QMS認證</h3>
+				<p>品質管理系統</p>
+				</div>
+			</div>
+			
+			
 
 		</div>
 
 	</div>
-
-</div>
-
-</div>
 
 </section>
+-->
+
+<section>
+
+	<div class="container">
+
+		<h2 class="section-title">
+		證書展示
+		</h2>
+
+		<div class="advantages2">
+
+			<div class="adv">
+
+				<div class="icon">
+				<img src="images/ISO9001.png" width="150" height="250">
+				</div>
+
+				<div class="display-v2">
+				<h4>ISO9001</h4>
+				<p>品質管理系統</p>			
+				</div>
+
+			</div>
+
+			<div class="adv">
+
+				<div class="icon">
+				<img src="images/ISO13485.png" width="150" height="250">
+				</div>
+
+				<div class="display-v2">
+				<h4>ISO13485</h4>
+				<p>醫療器材品質管理系統</p>				
+				</div>
+
+			</div>
+
+			<div class="adv">
+
+				<div class="icon">
+				<img src="images/AS9100D.jpg" width="150" height="250">
+				</div>
+
+				<div class="display-v2">
+				<h4>AS9100D</h4>
+				<p>航太品質管理系統</p>			
+				</div>
+
+			</div>
+
+			<div class="adv">
+
+				<div class="icon">
+				<img src="images/ISO14000.png" width="150" height="250">
+				</div>
+
+				<div class="display-v2">
+				<h4>ISO14001</h4>
+				<p>環境管理系統</p>			
+				</div>
+
+			</div>
+			
+			<div class="adv">
+
+				<div class="icon">
+				<img src="images/QMS.png" width="150" height="250">
+				</div>
+
+				<div class="display-v2">
+				<h4>QMS認證</h4>
+				<p>品質管理系統</p>			
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
 
 <!-- Footer -->
 
@@ -240,7 +328,7 @@ style="background-image:url('images/品質與認證.png');">
 			<ul>
 			<li><a href="product.html">&#9654 &nbsp; 產品介紹</a></li>
 			<li><a href="quality.html">&#9654 &nbsp; 品質認證</a></li>
-			<li>&#9654 &nbsp; 聯絡我們</li>
+			<li><a href="https://www.surveycake.com/s/nxPva" target="_blank">&#9654 &nbsp; 聯絡我們</a></li>
 			</ul>
 		</div>		
 
@@ -249,7 +337,7 @@ style="background-image:url('images/品質與認證.png');">
 			<ul>
 			<li>有任何需求或問題？</li>
 			<li>觀迎與我們聯繫！</li>
-			<li>聯絡我們</li>
+			<li><a href="https://www.surveycake.com/s/nxPva" target="_blank"> 聯絡我們</a></li>
 			</ul>
 		</div>
 
