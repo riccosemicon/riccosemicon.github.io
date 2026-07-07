@@ -148,14 +148,13 @@ header{
 /* ===== Hero ===== */
 
 .hero{
-    height:650px;
-	
+    height:650px;	
     background-size:cover;
     background-position:center;
     display:flex;
     align-items:center;
 }
-/* height:650px; */
+
 
 /*
 .hero{
@@ -207,6 +206,27 @@ header{
     text-decoration:none;
 }
 
+.btn2{   
+    margin-top:35px;
+    padding:14px 40px; 
+	display: inline-block;
+    background-color: #ffffff;    /* 白底 */
+    border: 2px solid #000000;    /* 黑框：2px 粗細、實線、黑色 */
+    color: #000000;               /* 文字顏色：黑色 */
+    text-decoration: none;        /* 移除超連結底線 (若為 <a> 標籤) */
+    padding: 10px 20px;           /* 內距：上下 10px，左右 20px (撐開框框空間) */	
+}
+
+.btn3{         
+    background:#082449
+    color:white; 
+	display: inline-block;
+	background-color: #082449;    /* 白底 */
+	border: 2px solid #8EA0B2;    /* 黑框：2px 粗細、實線、黑色 */	
+	text-decoration: none;        /* 移除超連結底線 (若為 <a> 標籤) */
+	padding: 10px 60px;           /* 內距：上下 10px，左右 20px (撐開框框空間) */
+}
+
 /* ===== Section ===== */
 
 section{
@@ -218,12 +238,70 @@ section{
     margin:auto;
 }
 
+.container2{
+    width:1600px; /* 1200px */
+    margin:auto;
+}
+
+/* 基本設定：圖片預設無透明度，並加上平滑過渡效果 */
+.container2 img {
+  width: 30%; /* 依版面需求調整寬度 */
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}
+
+/* 當滑鼠移到整個容器時，將所有圖片淡化為 0.3 (30% 不透明度)
+.container2:hover img {
+  opacity: 0.3;
+}
+ */
+ 
+/* 當滑鼠單獨移到某張圖片上方時，該張圖片恢復為 1 (完全不透明)
+.container2 img:hover {
+  opacity: 1;
+}
+ */ 
+
+
+/* 當滑鼠進入「總容器」時，把所有區塊都變淡 */
+.container2:hover .category-card {
+  opacity: 0.3;
+}
+
+/* 當滑鼠指到「特定區塊」時（不論是圖片或文字），該區塊恢復完全不透明 */
+.container2 .category-card:hover {
+  opacity: 1;
+}
+
+
 .section-title{
     text-align:center;
     font-size:42px;
     color:#163760;
     margin-bottom:60px;
 }
+
+
+.section-title2{        
+    color:#163760;
+    margin-bottom:60px;
+	padding-left: 15px; 
+	position: relative;
+}
+
+.section-title2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* 讓線條垂直置中對齊文字 */
+  width: 5px; /* 線條寬度 */
+  height: 80%; /* 線條高度 */
+  background-color: #163760;  /* 線條顏色 #ff5722; */
+  border-radius: 2px; /* 讓線條邊緣變圓滑 */
+}
+
+
 
 .section-title:after{
     content:"";
@@ -294,6 +372,13 @@ section{
     gap:40px;
 }
 
+
+.advantages3{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+	gap:40px;	
+}
+
 .adv{
 	display:flex;
     text-align:center;
@@ -302,15 +387,52 @@ section{
 	gap: 12px;		
 }
 
+
 .adv2 { 
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px;  
 }
+
+.adv3 {	  
+	display:flex;
+	text-align:center;
+	background:white;
+	padding:40px 20px;
+	gap: 12px;
+   
+	justify-content: center; 
+	align-items: center;          /*  讓子元件在垂直方向上「置中對齊」，確保各區塊對齊同一水平線 */
+	position: relative; /* 為了讓偽元素定位基準正確 */
+
+}
+
+  /* 移除最後一個區塊的隔線 */
+.adv3:last-child::after {
+    display: none;
+}
+
+  /* 透過偽元素繪製半高垂直隔線 */
+  .adv3::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px; /* 隔線寬度 */
+    height: 50%; /* 隔線高度為父層的一半 */
+    background-color: #ccc; /* 隔線顏色 */
+  }
 
 .icon{
     font-size:50px;
     color:#163760;
     margin-bottom:20px;
+}
+
+.icon3{
+    font-size:50px;
+    color:#163760;
+	align-items: center;
 }
 
 .display-h{
@@ -336,6 +458,7 @@ section{
 	height: 250px;            /* 必須設定容器高度 */	
 	text-align: start;
 }
+
 
 .adv h4{
     margin-bottom:15px;
@@ -369,6 +492,72 @@ section{
   align-items: center; /* 上下垂直置中 */
   margin-bottom: 20px;
   text-align: center;
+}
+
+
+/* 單一欄位：佔寬 25% (扣除間距) */
+.block3 {
+  flex: 1 1 calc(25% - 20px);
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
+  display: flex;
+  flex-direction: column;
+}
+
+/* 上半區域：左右配置 */
+.upper-section {
+  display: flex;
+  padding: 20px;
+  gap: 15px;
+  
+  justify-content: flex-end;
+  
+  /* border-bottom: 1px solid #eee; */
+}
+
+
+/* 上半部的左區域（圖片容器）：設定為 flex 並水平置中 */
+.image-wrapper {
+  flex: 0 0 100px;      /* 固定左區域寬度，可依需求調整 */
+  display: flex;
+  /* justify-content: center;  讓圖片在左區域內水平置中 */
+  align-items: center;
+  
+  justify-content: flex-end;
+
+}
+
+
+.upper-section img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover; 
+  border-radius: 4px;
+  
+  align-items: center; /* 上下垂直置中 */
+}
+
+.upper-section .text-content {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.5;
+  /* color: #333; */
+  
+  align-items: center; /* 上下垂直置中 */
+  text-align: center; /* 文字水平置中 */
+}
+
+/* 下半區域：文字水平置中 */
+.lower-section {
+  padding: 20px;
+  text-align: center; /* 文字水平置中 */
+  font-size: 16px;
+  font-weight: bold;
+  
+  /* color: #0066cc; */
+  /* background-color: #fafafa; */
 }
 
 
@@ -414,8 +603,10 @@ footer{
     width:1600px;  /* 1200px */
     margin:auto;
     display:grid;
-    grid-template-columns:2fr 2fr 1fr 1fr 2fr;
+    /* grid-template-columns:1fr 1fr 1fr 1fr 2fr; */
+	grid-template-columns:1fr 1fr 1fr 1fr;
     gap:40px;
+	column-rule: 1px solid #ccc; /* 快速設定垂直分隔線 */
 }
 
 .footer-title{
@@ -440,6 +631,23 @@ footer a{
     text-align:center;
     margin-top:40px;
     opacity:.8;
+}
+
+.grid-container {
+  display: grid;
+  /* 定義 3 等份的欄位，寬度分別為 1fr */
+  grid-template-columns: repeat(2, 1fr); 
+  /* 定義間距 */
+  gap: 10px;
+  /* 清除 ul 預設的 padding 與清單符號 */
+  list-style: none;
+  padding: 0;
+}
+
+.grid-container li {
+  background-color: #082449;
+  /* padding: 10px; */
+  text-align: center;
 }
 
 /* ===== Responsive ===== */
@@ -651,6 +859,78 @@ footer a{
     object-fit:contain;
 }
 
+/* 網格佈局：水平分為四個區塊 */
+.container4 {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+	max-width: 1600px;
+	margin: 0 auto;
+	/* background-color: #D7DEE5; */
+	background-color: #F5F5F5;
+}
+
+/* 每個區塊設定 */
+.block4 {
+	background-color: #ffffff;
+	/* border: 1px solid #ddd; */
+	/* border-radius: 8px; */
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	background-color: #F5F5F5;
+}
+
+/* == 上方的區域 == */
+.block-top {
+	display: flex;
+	height: 120px; /* 200px根據需求調整高度 */
+	/* border-bottom: 1px solid #eee; */
+}
+
+/* 上面區域 - 左邊：圖垂直置中靠右 */
+.content-left {
+	flex: 1;
+	display: flex;
+	align-items: flex-end; /* 垂直置中 */
+	justify-content: flex-end; /* 水平靠右 */
+	padding-right: 15px;
+}
+
+.content-left img {
+	width: 108px;   /* 96px */
+	height: 108px;
+	object-fit: contain;
+}
+
+/* 上面區域 - 右邊：文字垂直置中靠左 */
+.content-right {
+	flex: 1;
+	display: flex;
+	align-items: center; /* 垂直置中 */
+	justify-content: flex-start; /* 水平靠左 */
+	padding-left: 15px;
+	font-size: 16px;
+	color: #333;
+}
+
+/* == 下面的區域 == */
+.block-bottom {
+	flex: 1;
+	min-height: 50px ; /* 100px根據需求調整高度 */
+	display: flex;
+	align-items: flex-start; /* 垂直置中 */
+	justify-content: center; /* 水平置中 */
+	padding: 15px;
+	text-align: center;
+	color: #666;
+	/* background-color: #fafafa; */
+}
+
+
+
+
+
 /* =========================
    Custom Capability
 ========================= */
@@ -697,7 +977,7 @@ footer a{
 
 .company-banner-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
+    /*grid-template-columns:1fr 1fr;*/
     gap:50px;
     align-items:center;
 }
@@ -733,10 +1013,11 @@ footer a{
 ========================= */
 
 .company-statistics{
-    background:#f7f9fc;
+    background:white;
     padding:80px 0;
 }
-
+/* background:#f7f9fc; */
+ 
 .stats-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -764,6 +1045,7 @@ footer a{
 ========================= */
 
 .vision-section{
+	background:white;
     padding:80px 0;
 }
 
@@ -789,9 +1071,10 @@ footer a{
 ========================= */
 
 .company-information{
-    background:#f7f9fc;
+    background:white;
     padding:80px 0;
 }
+/* background:#f7f9fc; */
 
 .info-grid{
     display:grid;
