@@ -18,31 +18,26 @@
 <header>
 
     <div class="navbar">
-
         <div class="logo">
-		<a href="index.html">
-			<img src="images/RiCCO-LOGO(去背).png" alt="回到首頁" width="40%">
-		</a>		
-        </div>
-		
+			<a href="index.html">
+				<img src="images/RiCCO-LOGO(去背).png" alt="回到首頁" width="40%">
+			</a>		
+        </div>		
 		<!-- HTML 選單結構 -->
 		<ul class="nav-menu">			
 			<li class="nav-item"><a href="company.html" class="nav-link" onclick="setActive(this)">公司介紹</a></li>
 			<li class="nav-item"><a href="#" class="nav-link" onclick="setActive(this)">服務領域</a></li>
 			<li class="nav-item"><a href="#" class="nav-link" onclick="setActive(this)">技術優勢</a></li>
-			<li class="nav-item"><a href="product.html" class="nav-link  active" onclick="setActive(this)">產品介紹</a></li>
+			<li class="nav-item"><a href="product.html" class="nav-link" onclick="setActive(this)">產品介紹</a></li>
 			<li class="nav-item"><a href="quality.html" class="nav-link" onclick="setActive(this)">品質與認證</a></li>
-			<li class="nav-item"><a href="https://www.surveycake.com/s/nxPva" target="_blank" class="nav-link" onclick="setActive(this)">聯絡我們</a></li>			
-		</ul>
-		
+			<li class="nav-item"><a href="contact.html" class="nav-link" onclick="setActive(this)">聯絡我們</a></li>			
+		</ul>		
 		<!-- HTML 選單結構 -->
 		<ul class="nav-menu">	
 			<li class="nav-item"><a href="#" class="nav-link2 active" onclick="setActive2(this)">繁中</a></li>
 			<li class="nav-item"><a href="#" class="nav-link2" onclick="setActive2(this)">EN</a></li>
-			<li class="nav-item"><a href="#" class="nav-link2" onclick="setActive2(this)">日本語</a></li>
-			
+			<li class="nav-item"><a href="#" class="nav-link2" onclick="setActive2(this)">日本語</a></li>			
 		</ul>
-
 		<!-- JavaScript 切換點擊狀態 -->
 		<script>
 			function setActive(element) {
@@ -53,8 +48,7 @@
 				// 為當前點擊的項目加上 active 類別
 				element.classList.add('active');
 			}
-		</script>
-		
+		</script>		
 		<!-- JavaScript 切換點擊狀態 -->
 		<script>
 			function setActive2(element) {
@@ -65,8 +59,7 @@
 				// 為當前點擊的項目加上 active 類別
 				element.classList.add('active');
 			}
-		</script>		
-
+		</script>
     </div>
 	
 </header>
@@ -93,7 +86,7 @@ style="background-image:url('images/產品與技術.png');">
 
 <section class="product-category">
 
-	<div class="container">
+	<div class="container2">
 
 		<div class="category-grid">
 
@@ -142,46 +135,46 @@ style="background-image:url('images/產品與技術.png');">
 
 	<div class="container">
 
-		<h2>
+		<h2 class="section-title2">
 		代表產品
 		</h2>
 
 		<div class="product-grid">
-
+		
 			<div class="product-card">
-			<img src="images/product1.jpg">
-			<h3>矽膠密封件</h3>
-			<p>
-			高氣密性
-			適用半導體設備環境
-			</p>
-
+				<img src="images/客製開發件.png">
+				<h3>矽膠密封件</h3>
+				<p>
+				高氣密性
+				適用半導體設備環境
+				</p>
 			</div>
+			
 			<div class="product-card">
-			<img src="images/product2.jpg">
-			<h3>O-ring / Gasket</h3>
-			<p>
-			多種材料規格
-			適用性廣
-			</p>
-
+				<img src="images/客製開發件.png">
+				<h3>O-ring / Gasket</h3>
+				<p>
+				多種材料規格
+				適用性廣
+				</p>
 			</div>
+			
 			<div class="product-card">
-			<img src="images/product3.jpg">
-			<h3>醫療級矽膠管件</h3>
-			<p>
-			生物相容材料
-			安全無毒
-			</p>
-
+				<img src="images/客製開發件.png">
+				<h3>醫療級矽膠管件</h3>
+				<p>
+				生物相容材料
+				安全無毒
+				</p>
 			</div>
+			
 			<div class="product-card">
-			<img src="images/product4.jpg">
-			<h3>客製開發件</h3>
-			<p>
-			依照設計需求
-			完整開發製造
-			</p>
+				<img src="images/客製開發件.png">
+				<h3>客製開發件</h3>
+				<p>
+				依照設計需求
+				完整開發製造
+				</p>
 			</div>
 
 		</div>
@@ -194,128 +187,63 @@ style="background-image:url('images/產品與技術.png');">
 
 <section>
 
-	<div class="container">	
-		
-		<h2>
+<section class="product-section">
+
+	<div class="container">
+
+		<h2 class="section-title2">
 		客製化技術
 		</h2>
 		
-		<div class="advantages">
+		<div class="container4">
 		
-			<div class="adv2">	
-				<!-- 上半部：左右二區 -->
-				<div class="top-section">
-					<div class="left-icon">
-					  <img src="images/icon_尺寸.png" width="96" height="96">
+			<!-- 區塊 1 -->
+			<div class="block4">
+				<div class="block-top">
+					<div class="content-left">
+						<img src="images/icon_尺寸.png">
 					</div>
-					<div class="right-text">
-					  <h2>尺寸</h2>
-					</div>
+					<div class="content-right"><h2>尺寸</h2></div>
 				</div>
-				<!-- 下半部：文字 -->
-				<div class="bottom-section">
-					<p>依客戶需求客製規格</p>
-				</div>
-			</div>			
-			 
-			<div class="adv2">
-				<!-- 上半部：左右二區 -->
-				<div class="top-section">
-					<div class="left-icon">
-					  <img src="images/icon_材料.png" width="96" height="96">
-					</div>
-					<div class="right-text">
-					  <h2>材料</h2>
-					</div>
-				</div>
-				<!-- 下半部：文字 -->
-				<div class="bottom-section">
-					<p>多樣矽膠與特殊材料<br>
-					滿足不同生產需求</p>
-				</div>
-			</div>			
-
-			<div class="adv2">
-				<!-- 上半部：左右二區 -->
-				<div class="top-section">
-					<div class="left-icon">
-					  <img src="images/icon_硬度.png" width="96" height="96">
-					</div>
-					<div class="right-text">
-					  <h2>硬度</h2>
-					</div>
-				</div>
-				<!-- 下半部：文字 -->
-				<div class="bottom-section">
-					<p>Shore A 客製硬度</p>
-				</div>
+				<div class="block-bottom">依客戶需求客製規格</div>
 			</div>
-		 
-			<div class="adv2">
-				<!-- 上半部：左右二區 -->
-				<div class="top-section">
-					<div class="left-icon">
-					  <img src="images/icon_圖面開發.png" width="96" height="96">
+
+			<!-- 區塊 2 -->
+			<div class="block4">
+				<div class="block-top">
+					<div class="content-left">
+						<img src="images/icon_材料.png">
 					</div>
-					<div class="right-text">
-					  <h2>圖面開發</h2>
+					<div class="content-right"><h2>材料</h2></div>
+				</div>
+				<div class="block-bottom">多樣矽膠與特殊材料<br>滿足不同生產需求</div>
+			</div>
+
+			<!-- 區塊 3 -->
+			<div class="block4">
+				<div class="block-top">
+					<div class="content-left">
+						<img src="images/icon_硬度.png">
 					</div>
+					<div class="content-right"><h2>硬度</h2></div>
 				</div>
-				<!-- 下半部：文字 -->
-				<div class="bottom-section">
-					<p>2D/3D設計支援</p>
+				<div class="block-bottom">Shore A 客製硬度</div>
+			</div>
+
+			<!-- 區塊 4 -->
+			<div class="block4">
+				<div class="block-top">
+					<div class="content-left">
+						<img src="images/icon_圖面開發.png">
+					</div>
+					<div class="content-right"><h2>圖面開發</h2></div>
 				</div>
-			</div>	 
-		 
-		
-		
-			<!-- 
-			
-			<div class="adv">
-				<div class="icon">
-				<img src="images/icon_尺寸.png" width="96" height="96">
-				</div>
-				<div class="display-v">
-				<h4>尺寸</h4>
-				<p>依客戶需求客製規格</p>				
-				</div>
+				<div class="block-bottom">2D/3D設計支援</div>
 			</div>
 			
-			<div class="adv">
-				<div class="icon">
-				<img src="images/icon_材料.png" width="96" height="96">
-				</div>
-				<div class="display-v">
-				<h4>材料</h4>
-				<p>多樣矽膠與特殊材料</p>
-				<p>滿足不同生產需求</p>
-				</div>
-			</div>
-			<div class="adv">
-				<div class="icon">
-				<img src="images/icon_硬度.png" width="96" height="96">
-				</div>
-				<div class="display-v">
-				<h4>硬度</h4>
-				<p>Shore A 客製硬度</p>				
-				</div>
-			</div>
-			<div class="adv">
-				<div class="icon">
-				<img src="images/icon_圖面開發.png" width="96" height="96">
-				</div>
-				<div class="display-v">
-				<h4>圖面開發</h4>
-				<p>2D/3D設計支援</p>				
-				</div>
-			</div>	
-
-			-->
-
-			
-		</div>		
+		</div>	
 		
-	</div>
+	</div>	
 
 </section>
 
@@ -324,12 +252,10 @@ style="background-image:url('images/產品與技術.png');">
 <footer>
 
 	<div class="footer-grid">
-
 		<div>
 			<div class="logo">
 			<img src="images/RiCCO-LOGO(去背).png" width="40%">
 			</div>
-
 			<p>
 			專業矽膠零組件製造商<br>提供高品質客製化解決方案
 			</p>
@@ -346,19 +272,13 @@ style="background-image:url('images/產品與技術.png');">
 
 		<div>
 			<div class="footer-title">快速連結</div>
-			<ul>
+			<ul class="grid-container">
 			<li><a href="company.html">&#9654 &nbsp; 公司介紹</a></li>
 			<li>&#9654 &nbsp; 服務領域</li>
-			<li>&#9654 &nbsp; 技術優勢</li>
-			</ul>
-		</div>
-
-		<div>
-			<div class="footer-title">&nbsp;</div>
-			<ul>
+			<li>&#9654 &nbsp; 技術優勢</li>	
 			<li><a href="product.html">&#9654 &nbsp; 產品介紹</a></li>
 			<li><a href="quality.html">&#9654 &nbsp; 品質認證</a></li>
-			<li><a href="https://www.surveycake.com/s/nxPva" target="_blank">&#9654 &nbsp; 聯絡我們</a></li>
+			<li><a href="contact.html">&#9654 &nbsp; 聯絡我們</a></li>
 			</ul>
 		</div>		
 
@@ -367,15 +287,16 @@ style="background-image:url('images/產品與技術.png');">
 			<ul>
 			<li>有任何需求或問題？</li>
 			<li>觀迎與我們聯繫！</li>
-			<li><a href="https://www.surveycake.com/s/nxPva" target="_blank"> 聯絡我們</a></li>
-			</ul>
+			<br>
+			<li><a href="contact.html" class="btn3">
+				聯絡我們&emsp;&emsp;>
+			</a></li>			
+			</ul>			
 		</div>
-
-
 	</div>
 
 	<div class="copyright">
-	© 2004 RiCCO Engineering International Inc. All Rights Reserved.
+		© 2004 RiCCO Engineering International Inc. All Rights Reserved.
 	</div>
 
 </footer>

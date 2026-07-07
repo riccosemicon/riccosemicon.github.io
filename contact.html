@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>聯絡我們 | RiCCO</title>
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- Header -->
+
+<header>
+
+    <div class="navbar">
+        <div class="logo">
+			<a href="index.html">
+				<img src="images/RiCCO-LOGO(去背).png" alt="回到首頁" width="40%">
+			</a>		
+        </div>		
+		<!-- HTML 選單結構 -->
+		<ul class="nav-menu">			
+			<li class="nav-item"><a href="company.html" class="nav-link" onclick="setActive(this)">公司介紹</a></li>
+			<li class="nav-item"><a href="#" class="nav-link" onclick="setActive(this)">服務領域</a></li>
+			<li class="nav-item"><a href="#" class="nav-link" onclick="setActive(this)">技術優勢</a></li>
+			<li class="nav-item"><a href="product.html" class="nav-link" onclick="setActive(this)">產品介紹</a></li>
+			<li class="nav-item"><a href="quality.html" class="nav-link" onclick="setActive(this)">品質與認證</a></li>
+			<li class="nav-item"><a href="contact.html" class="nav-link" onclick="setActive(this)">聯絡我們</a></li>			
+		</ul>		
+		<!-- HTML 選單結構 -->
+		<ul class="nav-menu">	
+			<li class="nav-item"><a href="#" class="nav-link2 active" onclick="setActive2(this)">繁中</a></li>
+			<li class="nav-item"><a href="#" class="nav-link2" onclick="setActive2(this)">EN</a></li>
+			<li class="nav-item"><a href="#" class="nav-link2" onclick="setActive2(this)">日本語</a></li>			
+		</ul>
+		<!-- JavaScript 切換點擊狀態 -->
+		<script>
+			function setActive(element) {
+				// 移除所有項目的 active 類別
+				document.querySelectorAll('.nav-link').forEach(link => {
+					link.classList.remove('active');
+				});
+				// 為當前點擊的項目加上 active 類別
+				element.classList.add('active');
+			}
+		</script>		
+		<!-- JavaScript 切換點擊狀態 -->
+		<script>
+			function setActive2(element) {
+				// 移除所有項目的 active 類別
+				document.querySelectorAll('.nav-link2').forEach(link => {
+					link.classList.remove('active');
+				});
+				// 為當前點擊的項目加上 active 類別
+				element.classList.add('active');
+			}
+		</script>
+    </div>
+	
+</header>
+
+
+
+
+<section>
+
+	<iframe sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-modals"
+		width="100%" height="600px" src="https://www.surveycake.com/s/nxPva" style="border:#ddd 1px solid;" allowTransparency="true" frameborder="0"></iframe>
+
+</section>
+
+
+
+<!-- Footer -->
+
+<footer>
+
+	<div class="footer-grid">
+		<div>
+			<div class="logo">
+			<img src="images/RiCCO-LOGO(去背).png" width="40%">
+			</div>
+			<p>
+			專業矽膠零組件製造商<br>提供高品質客製化解決方案
+			</p>
+		</div>
+		
+		<div>
+			<div class="footer-title">聯絡資訊</div>
+			<ul>
+			<li>電話：+886-49-2225037分機1352</li>
+			<li>Email：marketing1210@riccoeng.com</li>
+			<li>地址：南投縣南投市彰南路一段555號</li>
+			</ul>
+		</div>
+
+		<div>
+			<div class="footer-title">快速連結</div>
+			<ul class="grid-container">
+			<li><a href="company.html">&#9654 &nbsp; 公司介紹</a></li>
+			<li>&#9654 &nbsp; 服務領域</li>
+			<li>&#9654 &nbsp; 技術優勢</li>	
+			<li><a href="product.html">&#9654 &nbsp; 產品介紹</a></li>
+			<li><a href="quality.html">&#9654 &nbsp; 品質認證</a></li>
+			<li><a href="contact.html">&#9654 &nbsp; 聯絡我們</a></li>
+			</ul>
+		</div>		
+
+		<div>
+			<div class="footer-title">與我們聯繫</div>
+			<ul>
+			<li>有任何需求或問題？</li>
+			<li>觀迎與我們聯繫！</li>
+			<br>
+			<li><a href="contact.html" class="btn3">
+				聯絡我們&emsp;&emsp;>
+			</a></li>			
+			</ul>			
+		</div>
+	</div>
+
+	<div class="copyright">
+		© 2004 RiCCO Engineering International Inc. All Rights Reserved.
+	</div>
+
+</footer>
+
+</body>
+
+</html>

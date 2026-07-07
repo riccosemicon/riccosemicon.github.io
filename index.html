@@ -15,13 +15,11 @@
 <header>
 
     <div class="navbar">
-
         <div class="logo">
-		<a href="index.html">
-			<img src="images/RiCCO-LOGO(去背).png" alt="回到首頁" width="40%">
-		</a>		
-        </div>
-		
+			<a href="index.html">
+				<img src="images/RiCCO-LOGO(去背).png" alt="回到首頁" width="40%">
+			</a>		
+        </div>		
 		<!-- HTML 選單結構 -->
 		<ul class="nav-menu">			
 			<li class="nav-item"><a href="company.html" class="nav-link" onclick="setActive(this)">公司介紹</a></li>
@@ -29,17 +27,14 @@
 			<li class="nav-item"><a href="#" class="nav-link" onclick="setActive(this)">技術優勢</a></li>
 			<li class="nav-item"><a href="product.html" class="nav-link" onclick="setActive(this)">產品介紹</a></li>
 			<li class="nav-item"><a href="quality.html" class="nav-link" onclick="setActive(this)">品質與認證</a></li>
-			<li class="nav-item"><a href="https://www.surveycake.com/s/nxPva" target="_blank" class="nav-link" onclick="setActive(this)">聯絡我們</a></li>			
-		</ul>
-		
+			<li class="nav-item"><a href="contact.html" class="nav-link" onclick="setActive(this)">聯絡我們</a></li>			
+		</ul>		
 		<!-- HTML 選單結構 -->
 		<ul class="nav-menu">	
 			<li class="nav-item"><a href="#" class="nav-link2 active" onclick="setActive2(this)">繁中</a></li>
 			<li class="nav-item"><a href="#" class="nav-link2" onclick="setActive2(this)">EN</a></li>
-			<li class="nav-item"><a href="#" class="nav-link2" onclick="setActive2(this)">日本語</a></li>
-			
+			<li class="nav-item"><a href="#" class="nav-link2" onclick="setActive2(this)">日本語</a></li>			
 		</ul>
-
 		<!-- JavaScript 切換點擊狀態 -->
 		<script>
 			function setActive(element) {
@@ -50,8 +45,7 @@
 				// 為當前點擊的項目加上 active 類別
 				element.classList.add('active');
 			}
-		</script>
-		
+		</script>		
 		<!-- JavaScript 切換點擊狀態 -->
 		<script>
 			function setActive2(element) {
@@ -62,8 +56,7 @@
 				// 為當前點擊的項目加上 active 類別
 				element.classList.add('active');
 			}
-		</script>		
-
+		</script>
     </div>
 	
 </header>
@@ -231,22 +224,23 @@ style="background-image:url('images/官網首頁.png');">
 		<div class="certs">
 		
 			<div class="cert">
-			<img src="https://cdn-icons-png.flaticon.com/512/190/190411.png">
+			<img src="images/AS9100D_LOG.png">
 			<h4>ISO 9001</h4>
 			</div>
 			
 			<div class="cert">
-			<img src="https://cdn-icons-png.flaticon.com/512/190/190411.png">
+			<img src="images/ISO13485_LOG.jpg">
 			<h4>ISO 13485</h4>
 			</div>
 
 			<div class="cert">
-			<img src="https://cdn-icons-png.flaticon.com/512/190/190411.png">
+			<img src="images/AS9100D_LOG.png">
 			<h4>AS 9100D</h4>
 			</div>
 			
 			<div class="cert">
-			<img src="https://cdn-icons-png.flaticon.com/512/190/190411.png">
+			<br><br>
+			<img src="images/ISO14000_LOG.gif" style="width: 50%; height: auto;">
 			<h4>ISO 14001</h4>
 			</div>
 			
@@ -256,7 +250,18 @@ style="background-image:url('images/官網首頁.png');">
 			</div>	
 
 		</div>
-
+		
+		  
+		<div style="display: flex; justify-content: center;">
+			<a href="quality.html" class="btn2">
+				了解更多認證&emsp;&emsp;>
+			</a>
+		</div>
+		
+		<!--
+		<img src="https://cdn-icons-png.flaticon.com/512/190/190411.png">
+		-->
+		
 	</div>
 
 </section>
@@ -264,12 +269,10 @@ style="background-image:url('images/官網首頁.png');">
 <footer>
 
 	<div class="footer-grid">
-
 		<div>
 			<div class="logo">
 			<img src="images/RiCCO-LOGO(去背).png" width="40%">
 			</div>
-
 			<p>
 			專業矽膠零組件製造商<br>提供高品質客製化解決方案
 			</p>
@@ -286,19 +289,13 @@ style="background-image:url('images/官網首頁.png');">
 
 		<div>
 			<div class="footer-title">快速連結</div>
-			<ul>
+			<ul class="grid-container">
 			<li><a href="company.html">&#9654 &nbsp; 公司介紹</a></li>
 			<li>&#9654 &nbsp; 服務領域</li>
-			<li>&#9654 &nbsp; 技術優勢</li>
-			</ul>
-		</div>
-
-		<div>
-			<div class="footer-title">&nbsp;</div>
-			<ul>
+			<li>&#9654 &nbsp; 技術優勢</li>	
 			<li><a href="product.html">&#9654 &nbsp; 產品介紹</a></li>
 			<li><a href="quality.html">&#9654 &nbsp; 品質認證</a></li>
-			<li><a href="https://www.surveycake.com/s/nxPva" target="_blank">&#9654 &nbsp; 聯絡我們</a></li>
+			<li><a href="contact.html">&#9654 &nbsp; 聯絡我們</a></li>
 			</ul>
 		</div>		
 
@@ -307,15 +304,16 @@ style="background-image:url('images/官網首頁.png');">
 			<ul>
 			<li>有任何需求或問題？</li>
 			<li>觀迎與我們聯繫！</li>
-			<li><a href="https://www.surveycake.com/s/nxPva" target="_blank"> 聯絡我們</a></li>
-			</ul>
+			<br>
+			<li><a href="contact.html" class="btn3">
+				聯絡我們&emsp;&emsp;>
+			</a></li>			
+			</ul>			
 		</div>
-
-
 	</div>
 
 	<div class="copyright">
-	© 2004 RiCCO Engineering International Inc. All Rights Reserved.
+		© 2004 RiCCO Engineering International Inc. All Rights Reserved.
 	</div>
 
 </footer>
